@@ -1,0 +1,47 @@
+{
+  "name": "adventjs",
+  "version": "1.0.0",
+  "description": "My attempt at @midudev 's AdventJS challenges: https://adventjs.dev/en",
+  "homepage": "https://github.com/pablo-pmo/adventjs#readme",
+  "bugs": {
+    "url": "https://github.com/pablo-pmo/adventjs/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pablo-pmo/adventjs.git"
+  },
+  "license": "ISC",
+  "author": "pablo-pmo",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "prettier-write": "npx prettier --write",
+    "prettier-check": "npx prettier --check",
+    "eslint-fix": "npx eslint --fix",
+    "prepare": "husky"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,json,css,scss,md}": [
+      "prettier --write",
+      "eslint --fix"
+    ]
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.1",
+    "eslint": "^9.39.1",
+    "eslint-config-prettier": "^10.1.8",
+    "globals": "^16.5.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.7",
+    "prettier": "^3.7.3",
+    "typescript-eslint": "^8.48.0"
+  },
+  "dependencies": {
+    "jiti": "^2.6.1"
+  }
+}
